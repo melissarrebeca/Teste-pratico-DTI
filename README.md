@@ -8,6 +8,10 @@ Acesse o sistema através do link: [https://3fbaf009171a.ngrok.app/](https://3fb
 
 **OBS:** O sistema está hospedado remotamente devido ao curto tempo para aprender e minha falta de experiência prévia em deploy. Não foi possível subir o sistema para plataformas como Heroku ou Vercel.
 
+## Sistema funcionando
+
+No link a seguir, um vídeo no Youtube do meu sistema funcionando: [https://youtu.be/ob3Sw_I7INo](https://youtu.be/ob3Sw_I7INo)
+
 ## O Problema
 
 Carlos é um professor que precisa organizar as notas e a frequência de seus alunos. Cada aluno tem uma nota para cada uma das cinco disciplinas que Carlos ensina e um registro de presença para cada aula. O sistema permite que Carlos insira as notas de cada aluno (0 a 10) nas cinco disciplinas e a frequência de cada aluno em percentual (0 a 100%). 
