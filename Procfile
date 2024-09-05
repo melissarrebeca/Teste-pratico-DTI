@@ -1,1 +1,1 @@
-web: gunicorn app:api-sistema-de-notas-e-frequencia
+web: gunicorn api-sistema-de-notas-e-frequencia:app
