@@ -6,6 +6,10 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <script>
+        window.REACT_APP_API_URL = 'https://12a4ddd215fb.ngrok.app';
+    </script>
+
     <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.14.7/babel.min.js"></script>
@@ -14,6 +18,8 @@
     <div id="root"></div>
 
     <script type="text/babel">
+
+        const API_URL = window.REACT_APP_API_URL || 'http://localhost:5000';
 
         function Header() {
             return (
@@ -51,7 +57,7 @@
             }, []);
 
             const atualizarListaAlunos = React.useCallback(() => {
-                fetch('http://localhost:5000/api/alunos')
+                fetch(`${API_URL}/api/alunos`)
                     .then(response => response.json())
                     .then(data => {
                         setAlunos(data);
@@ -61,7 +67,7 @@
 
             const adicionarAluno = React.useCallback(async (novoAluno) => {
                 try {
-                    const response = await fetch('http://localhost:5000/api/alunos', {
+                    const response = await fetch(`${API_URL}/api/alunos`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -84,7 +90,7 @@
 
             const buscarAlunos = React.useCallback(() => {
                 console.log("Iniciando busca de alunos");
-                fetch('http://localhost:5000/api/alunos')
+                fetch(`${API_URL}/api/alunos`)
                     .then(response => response.json())
                     .then(data => {
                         console.log("Dados dos alunos recebidos:", data);
@@ -96,7 +102,7 @@
             const editarAluno = React.useCallback(async (id, dadosAtualizados) => {
                 console.log(`Iniciando edição do aluno ${id}`, dadosAtualizados);
                 try {
-                    const response = await fetch(`http://localhost:5000/api/alunos/${id}`, {
+                    const response = await fetch(`${API_URL}/api/alunos${id}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json',
@@ -129,7 +135,7 @@
 
             const deletarAluno = React.useCallback(async (id) => {
                 try {
-                    const response = await fetch(`http://localhost:5000/api/alunos/${id}`, {
+                    const response = await fetch(`${API_URL}/api/alunos/${id}`, {
                         method: 'DELETE',
                     });
 
@@ -149,7 +155,7 @@
             }, []);
 
             const atualizarMediasTurma = React.useCallback(() => {
-                fetch('http://localhost:5000/api/media-turma')
+                fetch(`${API_URL}/api/media-turma`)
                     .then(response => response.json())
                     .then(data => {
                         setMediasTurma(data);
@@ -158,7 +164,7 @@
             }, []);
 
             const atualizarAlunosAcimaMedia = React.useCallback(() => {
-                fetch('http://localhost:5000/api/alunos-acima-media')
+                fetch(`${API_URL}/api/alunos-acima-media`)
                     .then(response => response.json())
                     .then(data => {
                         setAlunosAcimaMedia(data);
@@ -167,7 +173,7 @@
             }, []);
 
             const atualizarAlunosBaixaFrequencia = React.useCallback(() => {
-                fetch('http://localhost:5000/api/alunos-baixa-frequencia')
+                fetch(`${API_URL}/api/alunos-baixa-frequencia`)
                     .then(response => response.json())
                     .then(data => {
                         setAlunosBaixaFrequencia(data);
@@ -223,7 +229,7 @@
             
                 try {
 
-                    const response = await fetch('http://localhost:5000/api/alunos', {
+                    const response = await fetch(`${API_URL}/api/alunos`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
