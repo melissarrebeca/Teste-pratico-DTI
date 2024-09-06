@@ -1,0 +1,7 @@
+version: "2"
+authtoken: 2leelEdtdybXpwNB4mL6cAp5L8w_7jrGTgRsh4JGNKW8ean89
+tunnels:
+  web_app:
+    addr: 5000
+    proto: http
+web_addr: localhost:4040
