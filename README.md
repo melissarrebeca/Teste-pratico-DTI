@@ -32,7 +32,6 @@ Carlos é um professor que precisa organizar as notas e a frequência de seus al
 - Média do aluno como média simples das cinco disciplinas
 - Média da turma como média simples das notas de todos os alunos por disciplina
 - Sem armazenamento de datas específicas de aulas ou faltas
-- Sem requisitos específicos para edição ou exclusão de dados após inserção
 
 ## Decisões de Projeto
 
