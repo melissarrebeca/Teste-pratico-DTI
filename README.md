@@ -4,7 +4,7 @@ Este projeto é minha versão do teste prático para estágio em desenvolvimento
 
 ## Acesso ao Sistema
 
-Acesse o sistema através do link: [https://e5480f77d00d.ngrok.app](https://e5480f77d00d.ngrok.app) 
+Acesse o sistema através do link: [https://7236a0a9c11c.ngrok.app](https://7236a0a9c11c.ngrok.app) 
 
 **OBS:** O sistema está hospedado remotamente devido ao curto tempo para aprender e minha falta de experiência prévia em deploy. Não foi possível subir o sistema para plataformas como Heroku ou Vercel.
 
